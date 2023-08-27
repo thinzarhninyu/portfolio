@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import profilePic from '../../public/img/profile.jpg';
+import profilePic from '../../../public/img/profile.jpg';
 import { AiFillFilePdf } from "react-icons/ai";
 
 export default function AboutMeOverview() {
