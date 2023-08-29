@@ -1,27 +1,7 @@
 import Link from 'next/link';
+import { education } from '@/app/data';
 
 export default function AboutMeEducation() {
-
-    const details = [
-        {
-            school: 'Singapore Polytechnic (SP)',
-            concentration: 'Diploma in Information Technology',
-            period: 'April 2022 - Present',
-            description: 'As a Diploma in Information Technology (DIT) student in SP, I get to explore a wide range of skillsets from mobile and web development to data analytics. I have gained hands-on experiences by developing mobile and web applications using a variety of libraries  and frameworks :)',
-            present: true,
-            view: 'Projects',
-            link: '/projects'
-        },
-        {
-            school: 'Institute of International Professionalism (IIP)',
-            concentration: 'IGCSE',
-            period: 'May 2019 - May 2021',
-            description: 'I took 9 subjects for my IGCSE, which included Computer Science and Information & Communication Technology (ICT), and achieved A+ for all subjects :0',
-            present: false,
-            view: 'Certificate',
-            link: '/certs/igcse.pdf'
-        },
-    ]
 
     return (
         <div className="mx-5">
@@ -29,7 +9,7 @@ export default function AboutMeEducation() {
 
 
             <ol className="relative border-l border-gray-200 dark:border-gray-700 px-5 z-0">
-                {details.map(({ school, concentration, period, description, present, view, link }) => (
+                {education.map(({ school, concentration, period, description, present, view, link }) => (
                     <li key={concentration} className="mb-10 ml-6">
                         <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-900 rounded-full -left-3 ring-8 ring-gray-900">
                             <svg className="w-2.5 h-2.5 text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">

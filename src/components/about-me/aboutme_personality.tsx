@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import KDB from '../KDB';
+import { strengths, weaknesses } from '@/app/data'
 
 export default function AboutMePersonality() {
-    const strengths = ['Time Management', 'Teamworking', 'Leadership', 'Responsibility', 'Continuous Learner'];
-    const weaknesses = ['Introvertedness', 'Zoophobia', 'Social Anxiety', 'Overcommitments']
     return (
         <div className="mx-5">
             <h1 className='mb-10 text-xl'>Personality</h1>

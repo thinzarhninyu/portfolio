@@ -5,8 +5,6 @@ import { Outfit } from 'next/font/google'
 import Header from '../components/header'
 import Footer from '../components/footer'
 
-const inter = Inter({ subsets: ['latin'] })
-
 const outfit = Outfit({
   weight: '400',
   subsets: ['latin'],

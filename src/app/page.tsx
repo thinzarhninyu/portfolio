@@ -1,37 +1,17 @@
 import Image from 'next/image'
 import profilePic from '../../public/img/profile.jpg';
-// import ProjectOverview from '@/components/project_overview';
+import { projects, tags } from './data'
 import Project from '@/components/projects/project';
 import KDB from '@/components/KDB';
 import Link from 'next/link';
 import { AiFillFilePdf } from "react-icons/ai";
 
 export default function Home() {
-  const tags = ['Programmer', 'UI/UX Enthusiast', 'Music Enjoyer'];
 
-  const projects = [
-    {
-      title: 'Portfolio',
-      description: 'None other than this very own portfolio consisting of who I am as a person, as well as my experiences in Tech. This portfolio was developed as a personal project, to embark on Next.js and Typescript and was integrated with Mongo DB and Cloudinary.',
-      language: ['Next.js', 'Typescript', 'Tailwind CSS'],
-      image: '/img/portfolio.png',
-      link: 'https://thinzarhninyu.me'
-    },
-    {
-      title: 'Techzero',
-      description: 'Inspired by Challenger, an e-commerce tech platform developed as a part of a school project, together with my 3 other teammates. This project was integrated with NoSQL (Planetscale) and Cloudinary.',
-      language: ['React.js', 'Node.js', 'Javascript', 'Tailwind CSS'],
-      image: '/img/techzero.png',
-      link: 'http://techzero-v1-1.onrender.com/'
-    },
-    {
-      title: 'FED',
-      description: 'A personal website developed as a part of a school project.',
-      language: ['HTML', 'CSS', 'Bootstrap', 'Javascript'],
-      image: '/img/fed.png',
-      link: 'https://thinzarhninyu.github.io/fed-ca2/'
-    },
-  ]
+  const latest_projects = projects
+    .slice()
+    .sort((a, b) => b.date.getTime() - a.date.getTime())
+    .slice(0, 3);
 
   return (
     <main>
@@ -74,17 +54,10 @@ export default function Home() {
       </div>
       <div className='mt-20'>
         <h1 className='text-2xl mb-4'>Recent Projects</h1>
-        {/* <div className='w-full mt-7 mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-5'>
-          {projects.map(({ title, description, language, image }) => (
-            <div key={title} className='w-full flex justify-center items-center'>
-              <ProjectOverview title={title} description={description} language={language} image={image} />
-            </div>
-          ))}
-        </div> */}
         <div>
-          {projects.map(({ title, description, language, image, link }) => (
+          {latest_projects.map(({ title, description, language, image, link, code }) => (
             <div key={title} className='w-full flex justify-center items-center mb-10'>
-              <Project link={link} title={title} description={description} language={language} image={image} />
+              <Project link={link} code={code} title={title} description={description} language={language} image={image} />
             </div>
           ))}
         </div>
