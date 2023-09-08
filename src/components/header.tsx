@@ -52,7 +52,7 @@ export default function Header(): JSX.Element {
                     >
                         <ul className="flex mt-4 font-medium flex-row space-x-3 lg:space-x-8 lg:mt-0 items-center justify-center">
                             <li>
-                                <a href="https://www.linkedin.com/in/thinzar-hnin-yu/">
+                                <a href="https://www.linkedin.com/in/thinzarhninyu/">
                                     <BiLogoLinkedinSquare className="text-2xl hover:decoration-white" />
                                 </a>
                             </li>
