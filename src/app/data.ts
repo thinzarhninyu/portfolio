@@ -58,7 +58,7 @@ const frontendSkills: string[] = [
   ];
   
   const backendSkills: string[] = [
-    'Node.js', 'Express', 'Java', 'PHP'
+    'Node.js', 'Express', 'Java', 'PHP', 'Python'
   ];
   
   const databaseSkills: string[] = [
@@ -68,17 +68,22 @@ const frontendSkills: string[] = [
   const otherSkills: string[] = [
     'Cloudinary',
     'UI/UX',
-    'Usability Testing',
-    'ERD'
+    'Usability Testing'
   ];
   
 const skills: string[][] = [frontendSkills, backendSkills, databaseSkills, otherSkills];
 
 const interests = [
     {
+        image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fHww&w=1000&q=80',
+        text: 'Coding',
+        page: '/projects'
+    },
+    {
         image: 'https://storage.googleapis.com/website-zkhiphani/uploads/2021/09/1a8a119b-1cda750c780ab11003b9196fa32d0fd740e99ff3-scaled.jpeg',
         text: 'Photography',
-        page: '/about-me/photography'
+        // page: '/about-me/photography'
+        page: ''
     },
     {
         image: 'https://play-lh.googleusercontent.com/cShys-AmJ93dB0SV8kE6Fl5eSaf4-qMMZdwEDKI5VEmKAXfzOqbiaeAsqqrEBCTdIEs=w240-h480-rw',
@@ -91,10 +96,10 @@ const interests = [
         page: ''
     },
     {
-        image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fHww&w=1000&q=80',
-        text: 'Coding',
-        page: '/projects'
-    }
+        image: 'https://c4.wallpaperflare.com/wallpaper/799/418/374/chelsea-fc-champions-league-trophy-football-soccer-hd-wallpaper-preview.jpg',
+        text: 'Football',
+        page: ''
+    },
 ]
 
 const education = [

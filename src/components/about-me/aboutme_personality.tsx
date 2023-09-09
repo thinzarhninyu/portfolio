@@ -22,31 +22,35 @@ export default function AboutMePersonality() {
                 </div>
             </div>
 
-            <div className='mt-10'>
-                <h3 className="text-lg mb-3">My Strengths</h3>
-                <div className='flex flex-row flex-wrap justify-center items-center'>
-                    {strengths.map(strength => (
-                        <div key={strength} className='flex flex-row items-center justify-center'>
-                            <div className='w-full justify-center mr-4 mb-4'>
-                                <KDB content={strength} />
-                            </div>
-                        </div>
-                    ))}
+            <div className="px-10 bg-gray-800 border border-gray-700 rounded-lg shadow mt-5">
 
-                </div>
-            </div>
-
-            <div className='mt-5'>
-                <h3 className="text-lg mb-3">My Weaknesses</h3>
-                <div className='flex flex-row flex-wrap justify-center items-center'>
-                    {weaknesses.map(weakness => (
-                        <div key={weakness} className='flex flex-row items-center justify-center'>
-                            <div className='w-full justify-center mr-4 mb-4'>
-                                <KDB content={weakness} />
+                <div className='mt-10'>
+                    <h3 className="text-lg mb-3">My Strengths</h3>
+                    <div className='flex flex-row flex-wrap justify-center items-center'>
+                        {strengths.map(strength => (
+                            <div key={strength} className='flex flex-row items-center justify-center'>
+                                <div className='w-full justify-center mr-4 mb-4'>
+                                    <KDB content={strength} />
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+
+                    </div>
                 </div>
+
+                <div className='mt-10 mb-10'>
+                    <h3 className="text-lg mb-3">My Weaknesses</h3>
+                    <div className='flex flex-row flex-wrap justify-center items-center'>
+                        {weaknesses.map(weakness => (
+                            <div key={weakness} className='flex flex-row items-center justify-center'>
+                                <div className='w-full justify-center mr-4 mb-4'>
+                                    <KDB content={weakness} />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
             </div>
         </div >
     )
