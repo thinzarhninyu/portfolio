@@ -8,6 +8,7 @@ import AboutMeExtracurricular from '@/components/about-me/aboutme_extracurricula
 import AboutMeInterests from '@/components/about-me/aboutme_interests';
 import AboutMePersonality from '@/components/about-me/aboutme_personality';
 import AboutMeTestimonials from '@/components/about-me/aboutme_testimonials';
+import AboutMeCertificates from '@/components/about-me/aboutme_certificates';
 import AboutMeSkills from '@/components/about-me/aboutme_skills';
 
 export default function AboutMe() {
@@ -21,6 +22,7 @@ export default function AboutMe() {
                     { label: 'Education', value: 'education' },
                     { label: 'Extracurricular', value: 'extracurricular' },
                     { label: 'Skills', value: 'skills' },
+                    { label: 'Certifications', value: 'certifications' },
                     { label: 'Interests', value: 'interests' },
                     { label: 'Personality', value: 'personality' },
                     { label: 'Testimonials', value: 'testimonials' },
@@ -48,6 +50,9 @@ export default function AboutMe() {
                 </div>
                 <div id="skills" className='pt-20'>
                     <AboutMeSkills />
+                </div>
+                <div id="certifications" className='pt-20'>
+                    <AboutMeCertificates />
                 </div>
                 <div id="interests" className='pt-20'>
                     <AboutMeInterests />

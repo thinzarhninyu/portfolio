@@ -208,5 +208,57 @@ const other_extra = [
     },
 ]
 
+const certifications = [
+    {
+        name: 'AI FOR INDUSTRY® - Literacy In AI',
+        link: 'https://certified.aisingapore.org/0d2b26e2-525e-4ad1-9e2f-25328d3f7099',
+        date: 'September 2022',
+        image: 'https://aisingapore.org/wp-content/uploads/2022/11/AISGR-Vertical-Logo-CMYK-Full-Colour-1024x965.png',
+        school: ['AI Singapore']
+    },
+    {
+        name: 'Computer Programming for Everyone',
+        link: 'https://www.futurelearn.com/certificates/p9da10m',
+        date: 'July 2021',
+        image: 'https://ugc.futurelearn.com/other_assets/fl-steps.png',
+        school: ['University of Leeds']
+    },
+    {
+        name: 'Digital Skills: Embracing Digital Technology',
+        link: 'https://www.futurelearn.com/certificates/f2zmib5',
+        date: 'July 2021',
+        image: 'https://ugc.futurelearn.com/other_assets/fl-steps.png',
+        school: ['King\'s College London']
+    },
+    {
+        name: 'Introduction to Physical Computing',
+        link: 'https://www.futurelearn.com/certificates/j08tm3t',
+        date: 'July 2021',
+        image: 'https://ugc.futurelearn.com/other_assets/fl-steps.png',
+        school: ['Lancaster University']
+    },
+    {
+        name: 'Introduction to Virtual, Augmented and Mixed Reality',
+        link: 'https://www.futurelearn.com/certificates/osemwev',
+        date: 'July 2021',
+        image: 'https://ugc.futurelearn.com/other_assets/fl-steps.png',
+        school: ['Lancaster University']
+    },
+    {
+        name: 'First Step Korean',
+        link: 'https://coursera.org/share/f13155cf30979f3d79d06d78b41f0504',
+        date: 'June 2021',
+        image: 'https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera.s3.amazonaws.com/media/coursera-rebrand-logo-square.png?auto=format%2Ccompress&dpr=1',
+        school: ['Yonsei University']
+    },
+    {
+        name: 'Code Yourself! An Introduction to Programming',
+        link: 'https://coursera.org/share/287ac79e41797480424ba1e2e9b06e36',
+        date: 'May 2021',
+        image: 'https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera.s3.amazonaws.com/media/coursera-rebrand-logo-square.png?auto=format%2Ccompress&dpr=1',
+        school: ['The University of Edinburgh']
+    },
+]
+
   
-export { projects, tags, strengths, weaknesses, skills, interests, education, extra, other_extra };
+export { projects, tags, strengths, weaknesses, skills, interests, education, extra, other_extra, certifications };
