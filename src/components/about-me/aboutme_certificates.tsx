@@ -9,7 +9,7 @@ export default function AboutMeCertificates() {
             <div className="px-5 bg-gray-800 border border-gray-700 rounded-lg shadow">
                 <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
                     {certifications.map(({ name, link, date, image, school }) => (
-                        <li key={name} className="bg-gray-200 text-black my-5 p-5 sm:py-4 rounded-lg">
+                        <li key={name} className="bg-gray-300 text-black my-5 p-5 sm:py-4 rounded-lg">
                             <div className="flex items-center space-x-4">
                                 <div className="flex-shrink-0">
                                     <Image className="w-8 h-8 rounded-full" src={image} alt="Image" width={300} height={300} />

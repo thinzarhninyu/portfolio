@@ -1,5 +1,8 @@
+// "use client"
+
 import Interest from "./interest"
 import { interests } from "@/app/data"
+// import GitHubCalendar from "react-github-calendar";
 
 export default function AboutMeInterests() {
 
@@ -12,6 +15,14 @@ export default function AboutMeInterests() {
                     <Interest key={text} image={image} text={text} page={page} />
                 ))}
             </div>
+
+            {/* <div className="p-6 bg-gray-800 border border-gray-200 rounded-lg shadow border-gray-700 mt-5">
+                <p className="font-bold capitalize">GitHub Contribution</p>
+                <p className="my-4">
+                    The following is my GitHub contribution graph which shows my coding activity and productivity on the platform.
+                </p>
+                <GitHubCalendar username="thinzarhninyu" />
+            </div> */}
         </div>
     )
 }

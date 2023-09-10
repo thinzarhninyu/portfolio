@@ -10,7 +10,11 @@ export default function AboutMePersonality() {
             <div className="p-6 bg-gray-800 border border-gray-200 rounded-lg shadow border-gray-700">
                 <h3 className="text-lg mb-3">My Personality Type</h3>
                 <div className='text-justify'>
-                    <p>My MBTI is: <Link href="https://16personalities.com/isfj-personality"><u>ISFJ</u></Link>, The Defender. (Introverted, Sensing, Feeling, Judging). ISFJs are hardworking and devoted, with a deep sense of responsibility. They have excellent analytical abilities and an eye for detail. Even though they may seem reserved, they tend to have well-developed people skills and social relationships.</p>
+                    <p className='mb-4'>My MBTI is: <Link href="https://16personalities.com/isfj-personality"><u>ISFJ</u></Link>, The Defender. (Introverted, Sensing, Feeling, Judging). ISFJs are hardworking and devoted, with a deep sense of responsibility. They have excellent analytical abilities and an eye for detail. Even though they may seem reserved, they tend to have well-developed people skills and social relationships.</p>
+
+                    <Link href='https://www.16personalities.com/profiles/121a9b151439f' className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700">View my personality profile!</Link>
+
+
                 </div>
             </div>
 
@@ -22,13 +26,13 @@ export default function AboutMePersonality() {
                 </div>
             </div>
 
-            <div className="px-10 bg-gray-800 border border-gray-700 rounded-lg shadow mt-5">
+            <div className="p-6 bg-gray-800 border border-gray-700 rounded-lg shadow mt-5">
 
-                <div className='mt-10'>
+                <div className=''>
                     <h3 className="text-lg mb-3">My Strengths</h3>
-                    <div className='flex flex-row flex-wrap justify-center items-center'>
+                    <div className='flex flex-row flex-wrap items-center'>
                         {strengths.map(strength => (
-                            <div key={strength} className='flex flex-row items-center justify-center'>
+                            <div key={strength} className='flex flex-row items-center'>
                                 <div className='w-full justify-center mr-4 mb-4'>
                                     <KDB content={strength} />
                                 </div>
@@ -38,11 +42,11 @@ export default function AboutMePersonality() {
                     </div>
                 </div>
 
-                <div className='mt-10 mb-10'>
+                <div className='mt-5'>
                     <h3 className="text-lg mb-3">My Weaknesses</h3>
-                    <div className='flex flex-row flex-wrap justify-center items-center'>
+                    <div className='flex flex-row flex-wrap items-center'>
                         {weaknesses.map(weakness => (
-                            <div key={weakness} className='flex flex-row items-center justify-center'>
+                            <div key={weakness} className='flex flex-row items-center'>
                                 <div className='w-full justify-center mr-4 mb-4'>
                                     <KDB content={weakness} />
                                 </div>

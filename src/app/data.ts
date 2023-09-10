@@ -23,9 +23,19 @@ const projects: Project[] = [
         description: 'Discord bot made with discord.py and OPENAI. A conversational bot, accompanied by a ChatGPT bot (access using \'/ai\' or \'/gpt\' commands. Invite your bot by clicking on the \'Demo\' button below!',
         language: ['Python'],
         image: '/img/discord.jpg',
-        link: 'https://discord.com/api/oauth2/authorize?client_id=1145359721780478093&permissions=1084479764544&scope=bot',
-        code: 'https://github.com/thinzarhninyu/discord_bot',
+        // link: 'https://discord.com/api/oauth2/authorize?client_id=1145359721780478093&permissions=1084479764544&scope=bot',
+        link: '',
+        code: 'https://github.com/thinzarhninyu/discord-bot',
         date: new Date('2023-08-29')
+    },
+    {
+        title: 'Telegram Bot',
+        description: 'Telegram bot made with telegram.ext and OPENAI, and integrated with MySQL. A conversational bot, accompanied by a ChatGPT bot (access using \'/ai\' or \'/gpt\' commands.',
+        language: ['Python'],
+        image: '/img/telegram.jpg',
+        link: '',
+        code: 'https://github.com/thinzarhninyu/telegram-bot',
+        date: new Date('2023-07-29')
     },
     {
         title: 'Techzero',
@@ -45,13 +55,22 @@ const projects: Project[] = [
         code: 'https://github.com/thinzarhninyu/fed-ca2',
         date: new Date('2022-08-06')
     },
+    {
+        title: 'BED',
+        description: 'A DVD Rental website developed as a part of a school project.',
+        language: ['HTML', 'CSS', 'Bootstrap', 'Javascript', 'Node.js', 'Express'],
+        image: '/img/bed.png',
+        link: '',
+        code: 'https://github.com/thinzarhninyu/bed-ca2',
+        date: new Date('2023-02-08')
+    },
 ]
 
-const tags = ['Programmer', 'UI/UX Enthusiast', 'Music Enjoyer'];
+const tags = ['Programmer', 'Duck Lover', 'Music Addict'];
 
 const strengths = ['Time Management', 'Teamworking', 'Leadership', 'Responsibility', 'Continuous Learner'];
 
-const weaknesses = ['Introvertedness', 'Zoophobia', 'Social Anxiety', 'Overcommitments']
+const weaknesses = ['Introvertedness', 'Zoophobia', 'Social Anxiety', 'Overcommitment']
 
 const frontendSkills: string[] = [
     'HTML', 'CSS', 'Tailwind CSS', 'Bootstrap', 'React.js', 'Next.js'
@@ -62,7 +81,7 @@ const frontendSkills: string[] = [
   ];
   
   const databaseSkills: string[] = [
-    'MySQL', 'NoSQL', 'Microsoft SQL', 'Planetscale', 'MongoDB', 'ERD'
+    'MySQL', 'NoSQL', 'Microsoft SQL', 'Planetscale', 'MongoDB', 'ERD', 'Prisma ORM'
   ];
   
   const otherSkills: string[] = [
@@ -88,7 +107,7 @@ const interests = [
     {
         image: 'https://play-lh.googleusercontent.com/cShys-AmJ93dB0SV8kE6Fl5eSaf4-qMMZdwEDKI5VEmKAXfzOqbiaeAsqqrEBCTdIEs=w240-h480-rw',
         text: 'Music',
-        page: 'https://open.spotify.com/user/f4tuhx8tibv4mqsixm4jkfiyv?si=28a72349ea4a46ed'
+        page: 'https://open.spotify.com/user/f4tuhx8tibv4mqsixm4jkfiyv?si=d78c2dea2b69401d'
     },
     {
         image: 'https://yt3.googleusercontent.com/ytc/AOPolaSbaST1JBNd9phht_n7tFN-VHx0FlvKPHeSDnmu4Q=s900-c-k-c0x00ffffff-no-rj',

@@ -47,7 +47,7 @@ export default function AboutMeSkills() {
                 </div>
             </div>
 
-            <div className="p-6 bg-gray-800 border border-gray-200 rounded-lg shadow border-gray-700 mb-4">
+            <div className="p-6 bg-gray-800 border border-gray-200 rounded-lg shadow border-gray-700">
                 <p className="mb-3">Other Skill-sets</p>
                 <div className='flex flex-row flex-wrap items-center'>
                     {skills[3].map((topic) => (

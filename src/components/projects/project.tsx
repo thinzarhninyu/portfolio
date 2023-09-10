@@ -53,12 +53,19 @@ export default function Project({
                     </CardContent>
                     <CardFooter>
                         <div className='flex flex-row flex-wrap justify-left items-center space-x-3'>
-                            <Link href={link} className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700">Link to Demo</Link>
+                            {link !== '' && (
+                                <Link
+                                    href={link}
+                                    className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700"
+                                >
+                                    Link to Demo
+                                </Link>
+                            )}
                             <Link href={code} className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700">Link to Code</Link>
                         </div>
                     </CardFooter>
                 </div>
-            </div>
-        </Card>
+            </div >
+        </Card >
     )
 }
