@@ -18,7 +18,6 @@ const Home: React.FC = () => {
       <div>
         <Testimonials />
       </div>
-      <Separator className='mt-16' />
       <div id="contact">
         <Contact />
       </div>
