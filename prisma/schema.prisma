@@ -1,0 +1,140 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "cockroachdb"
+  url      = env("DATABASE_URL")
+}
+
+model Education {
+  id          String    @id @default(cuid())
+  school      String
+  degree      String
+  field       String
+  startDate   DateTime
+  endDate     DateTime?
+  description String[]
+}
+
+model Experience {
+  id          String         @id @default(cuid())
+  company     String
+  position    String
+  startDate   DateTime
+  endDate     DateTime?
+  description String[]
+  type        ExperienceType
+}
+
+model Certifications {
+  id          String    @id @default(cuid())
+  name        String
+  authority   String
+  license     String?
+  startDate   DateTime?
+  endDate     DateTime?
+  date        DateTime
+  description String?
+  link        String
+}
+
+model Projects {
+  id           String    @id @default(cuid())
+  name         String
+  description  String
+  startDate    DateTime
+  endDate      DateTime?
+  link         String?
+  github       String?
+  image        String[]
+  featured     Boolean
+  technologies Skills[]
+}
+
+model Skills {
+  id          String     @id @default(cuid())
+  name        String
+  description String?
+  level       Level
+  type        SkillType
+  Projects    Projects[]
+  projectsId  String[]
+  featured    Boolean
+}
+
+model Interests {
+  id          String  @id @default(cuid())
+  name        String
+  description String?
+  image       String?
+}
+
+model Personality {
+  id                     String   @id @default(cuid())
+  name                   String
+  description            String?
+  personalityTypeLink    String
+  personalityProfileLink String
+  values                 String
+  strengths              String[]
+  weaknesses             String[]
+}
+
+model Testimonials {
+  id          String  @id @default(cuid())
+  name        String
+  avatar      String?
+  company     String?
+  position    String?
+  description String
+  link        String?
+}
+
+model Socials {
+  id   String     @id @default(cuid())
+  name String
+  link String
+  type SocialType
+}
+
+enum SocialType {
+  GITHUB
+  LINKEDIN
+  TWITTER
+  FACEBOOK
+  INSTAGRAM
+  TELEGRAM
+  YOUTUBE
+  TIKTOK
+  OTHER
+}
+
+enum SkillType {
+  SPOKEN_LANGUAGE
+  LANGUAGE
+  FULLSTACK
+  MOBILE
+  TOOL
+  DATABASE
+  HOSTING
+  PLATFORM
+  OTHER
+}
+
+enum Level {
+  BASIC
+  INTERMEDIATE
+  ADVANCED
+  EXPERT
+}
+
+enum ExperienceType {
+  WORK
+  EXTRACURRICULAR
+  VOLUNTEER
+  INTERNSHIP
+  CONTRACT
+  FREELANCE
+  OTHER
+}
