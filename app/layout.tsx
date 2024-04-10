@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Urbanist } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./_components/header/navbar";
 import Footer from "./_components/footer";
@@ -10,8 +10,9 @@ import { ThemeToggle } from "@/components/theme-toggle";
 const font = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'Thinzar Hnin Yu/ Michelle (micxehye)',
+  title: 'Thinzar Hnin Yu @micxehye: Software Developer',
+  description: 'A software developer based in Singapore who is passionate about building software that solves real-world problems. Final year Diploma in Information Technology student, specializing in Software Development, studying @ Singapore Polytechnic.',
+  metadataBase: new URL('https://www.thinzarhninyu.me'),
 };
 
 export default function RootLayout({
@@ -24,10 +25,17 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="/logo.png"
+          href="/icon.png"
           type="image/png"
-          sizes="any"
+          sizes="32x32"
         />
+        <meta property="og:image" content="/opengraph-image.png" />
+        <meta property="og:image:alt" content="Thinzar Hnin Yu @micxehye: Software Developer" />
+        <meta property="og:image:type" content="png" />
+        <meta name="twitter:image" content="/opengraph-image.png" />
+        <meta property="twitter:image:alt" content="Thinzar Hnin Yu @micxehye: Software Developer" />
+        <meta name="twitter:image:type" content="png" />
+        <meta name="keywords" content="Thinzar, Thinzar Hnin Yu, micxehye, Portfolio, Software Developer, Software Developer Portfolio" />
       </head>
       <body className={font.className}>
         <ThemeProvider
