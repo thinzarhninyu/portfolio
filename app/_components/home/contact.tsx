@@ -1,5 +1,7 @@
 "use client"
 
+import { useInView } from "framer-motion"
+import { useRef } from "react"
 import { ContactIcons } from "./contact-icons"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -17,6 +19,8 @@ import { contact } from "@/actions/contact"
 
 export const Contact: React.FC = () => {
 
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true });
     const [error, setError] = useState<string | undefined>("");
     const [success, setSuccess] = useState<string | undefined>("");
     const [isPending, startTransition] = useTransition();
@@ -45,7 +49,11 @@ export const Contact: React.FC = () => {
     };
 
     return (
-        <section className="">
+        <section className="" ref={ref}
+            style={{
+                opacity: isInView ? 1 : 0,
+                transition: "ease-in-out 0.75s"
+            }}>
             <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="text-center mt-16">
                     <h2 className="mt-6 text-xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl lg:text-2xl">Contact Me</h2>

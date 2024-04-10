@@ -1,10 +1,13 @@
+"use client"
+
 export const Block: React.FC<{
     icon: React.ReactNode,
     title: string,
     description: string
 }> = ({ icon, title, description }) => {
+
     return (
-        <>
+        <div>
             <span
                 className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-auto lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)]"
                 aria-hidden="true"></span>
@@ -19,6 +22,6 @@ export const Block: React.FC<{
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700 dark:text-gray-200">{description}</h4>
             </div>
-        </>
+        </div>
     )
 }

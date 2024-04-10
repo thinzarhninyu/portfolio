@@ -1,5 +1,7 @@
 "use client"
 
+import { useInView } from "framer-motion"
+import { useRef } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
     Carousel,
@@ -15,6 +17,8 @@ import { useEffect, useState } from "react"
 
 export const TestimonialCarousel: React.FC<{ testimonials: Testimonials[] }> = ({ testimonials }) => {
 
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true });
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
     const [count, setCount] = useState(0)
@@ -34,7 +38,11 @@ export const TestimonialCarousel: React.FC<{ testimonials: Testimonials[] }> = (
 
 
     return (
-        <div>
+        <div ref={ref}
+            style={{
+                opacity: isInView ? 1 : 0,
+                transition: "ease-in-out 0.75s"
+            }}>
             <Carousel setApi={setApi} className="w-full max-w-md aspect-square sm:aspect-[4/3]">
                 <CarouselContent>
                     {testimonials?.map((testimonial, index) => (

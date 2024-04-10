@@ -1,9 +1,11 @@
 import React from "react";
 import { Block } from "../block";
 import { introductionBlocks } from "@/data/constants";
-import { File, Book, Laptop, Pencil, Search, Calendar } from "lucide-react";
+import { File, Book, Laptop, Pencil, Search } from "lucide-react";
 import Link from "next/link";
 import { getEducationDetails, getExperienceDetails } from "@/data/data";
+import { Timeline } from "../timeline";
+import { MotionButton } from "../button";
 
 export const Introduction: React.FC = async () => {
 
@@ -20,9 +22,11 @@ export const Introduction: React.FC = async () => {
                     </p>
                 </div>
                 <div className="flex justify-center items-center mt-7">
-                    <Link href="/resume.pdf" className="inline-flex justify-center items-center px-4 py-2 outline outline-offset-2 outline-1 font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:underline">
-                        <File className="mr-2" /> View CV
-                    </Link>
+                    <MotionButton>
+                        <Link href="/resume.pdf" className="inline-flex justify-center items-center px-4 py-2 outline outline-offset-2 outline-1 font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:underline">
+                            <File className="mr-2" /> View CV
+                        </Link>
+                    </MotionButton>
                 </div>
                 <ul className="mx-auto mt-12 grid max-w-md grid-cols-1 gap-10 sm:mt-16 lg:mt-15 lg:max-w-5xl lg:grid-cols-4">
                     {introductionBlocks.map((block, index) => (
@@ -48,18 +52,7 @@ export const Introduction: React.FC = async () => {
                 <div className="px-6 sm:px-10 py-5 outline outline-offset-2 outline-1 outline-gray-300 rounded-lg mt-5">
                     <ol className="relative border-l border-gray-200 dark:border-gray-700 pl-1 z-0 space-y-5">
                         {education?.map(({ school, degree, field, startDate, endDate, description }) => (
-                            <li key={degree} className="ml-6">
-                                <span className="bg-white absolute flex items-center justify-center w-6 h-6 outline outline-offset-2 outline-1 rounded-full -left-3 p-1">
-                                    <Calendar className="w-6 h-6 text-gray-600" />
-                                </span>
-                                <h3 className="flex items-center mb-3 text-lg font-bold tracking-tight text-gray-900 dark:text-gray-100">
-                                    {degree}  <br />{school}
-                                </h3>
-                                <time className="block mb-4 text-sm font-normal leading-none text-gray-900 dark:text-gray-100">{startDate.toLocaleDateString(undefined, { month: 'short', year: 'numeric' })} - {endDate?.toLocaleDateString(undefined, { month: 'short', year: 'numeric' }) ?? "present"}</time>
-                                {description.map((desc, index) => (
-                                    <p key={index} className="mb-4 text-base font-normal text-gray-900 dark:text-gray-100 text-justify">{desc}</p>
-                                ))}
-                            </li>
+                            <Timeline key={degree} title={degree} place={school} startDate={startDate} endDate={endDate} description={description} />
                         ))}
                     </ol>
                 </div>
@@ -71,26 +64,17 @@ export const Introduction: React.FC = async () => {
                 <div className="px-6 sm:px-10 py-5 outline outline-offset-2 outline-1 outline-gray-300 rounded-lg mt-5">
                     <ol className="relative border-l border-gray-200 dark:border-gray-700 pl-1 z-0 space-y-5">
                         {experience?.map(({ position, company, startDate, endDate, description }) => (
-                            <li key={position} className="ml-6">
-                                <span className="bg-white absolute flex items-center justify-center w-6 h-6 outline outline-offset-2 outline-1 rounded-full -left-3 p-1">
-                                    <Calendar className="w-6 h-6 text-gray-600" />
-                                </span>
-                                <h3 className="flex items-center mb-3 text-lg font-bold tracking-tight text-gray-900 dark:text-gray-100">
-                                    {position}  <br />{company}
-                                </h3>
-                                <time className="block mb-4 text-sm font-normal leading-none text-gray-900">{startDate.toLocaleDateString(undefined, { month: 'short', year: 'numeric' })} - {endDate?.toLocaleDateString(undefined, { month: 'short', year: 'numeric' }) ?? "present"}</time>
-                                {description.map((desc, index) => (
-                                    <p key={index} className="mb-1 text-base font-normal text-gray-900 dark:text-gray-100 text-justify">{desc}</p>
-                                ))}
-                            </li>
+                            <Timeline key={position} title={position} place={company} startDate={startDate} endDate={endDate} description={description} />
                         ))}
                     </ol>
                 </div>
             </div>
             <div className="flex justify-center items-center mt-10">
-                <Link href="/about" className="inline-flex justify-center items-center px-4 py-2 outline outline-offset-2 outline-1 font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:underline">
-                    Click here to view more about me!
-                </Link>
+                <MotionButton>
+                    <Link href="/about" className="inline-flex justify-center items-center px-4 py-2 outline outline-offset-2 outline-1 font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:underline">
+                        Click here to view more about me!
+                    </Link>
+                </MotionButton>
             </div>
         </section>
     )

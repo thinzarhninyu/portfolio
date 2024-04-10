@@ -3,6 +3,7 @@ import { Project } from "../project";
 import Link from "next/link";
 import { SkillType } from "@prisma/client";
 import { Skill } from "../skill";
+import { MotionButton } from "../button";
 
 export const Projects: React.FC = async () => {
 
@@ -24,9 +25,11 @@ export const Projects: React.FC = async () => {
                 </div>
             </div>
             <div className="flex justify-center items-center mt-10">
-                <Link href="/projects" className="inline-flex justify-center items-center px-4 py-2 outline outline-offset-2 outline-1 font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:underline">
-                    View More
-                </Link>
+                <MotionButton>
+                    <Link href="/projects" className="inline-flex justify-center items-center px-4 py-2 outline outline-offset-2 outline-1 font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:underline">
+                        View More
+                    </Link>
+                </MotionButton>
             </div>
             <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="text-left mt-16">

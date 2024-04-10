@@ -1,7 +1,7 @@
 import { getCertifications, getExtracurriculars, getInterests, getPersonalityTraits } from "@/data/data";
-import { Calendar } from "lucide-react";
 import { Certification } from "../_components/certification";
 import { Badge } from "@/components/ui/badge";
+import { Timeline } from "../_components/timeline";
 
 const AboutPage: React.FC = async () => {
 
@@ -26,18 +26,7 @@ const AboutPage: React.FC = async () => {
                         <div className="px-6 sm:px-10 py-5 outline outline-offset-2 outline-1 outline-gray-300 rounded-lg mt-5">
                             <ol className="relative border-l border-gray-200 dark:border-gray-700 pl-1 z-0 space-y-5">
                                 {extracurriculars?.map(({ position, company, startDate, endDate, description }) => (
-                                    <li key={position} className="ml-6">
-                                        <span className="bg-white absolute flex items-center justify-center w-6 h-6 outline outline-offset-2 outline-1 rounded-full -left-3 p-1">
-                                            <Calendar className="w-6 h-6 text-gray-600" />
-                                        </span>
-                                        <h3 className="flex items-center mb-3 text-lg font-bold tracking-tight text-gray-900 dark:text-gray-100">
-                                            {position}  <br />{company}
-                                        </h3>
-                                        <time className="block mb-4 text-sm font-normal leading-none text-gray-900 dark:text-gray-100">{startDate.toLocaleDateString(undefined, { month: 'short', year: 'numeric' })} - {endDate?.toLocaleDateString(undefined, { month: 'short', year: 'numeric' }) ?? "present"}</time>
-                                        {description.map((desc, index) => (
-                                            <p key={index} className="mb-1 text-base font-normal text-gray-900 dark:text-gray-100 text-justify">{desc}</p>
-                                        ))}
-                                    </li>
+                                    <Timeline key={position} title={position} place={company} startDate={startDate} endDate={endDate} description={description} />
                                 ))}
                             </ol>
                         </div>

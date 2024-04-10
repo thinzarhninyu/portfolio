@@ -1,11 +1,23 @@
+"use client"
+
+import { useInView } from "framer-motion"
+import { useRef } from "react"
 import { Certifications } from "@prisma/client";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link"
 import { Award, SquareArrowOutUpRight } from "lucide-react";
 
 export const Certification: React.FC<{ certification: Certifications }> = ({ certification }) => {
+
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true });
+
     return (
-        <Card key={certification.id} className="w-full min-h-[200px] shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.025] flex flex-col justify-center items-center">
+        <Card ref={ref} key={certification.id} className="w-full min-h-[200px] shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.025] flex flex-col justify-center items-center"
+            style={{
+                opacity: isInView ? 1 : 0,
+                transition: "ease-in-out 0.75s"
+            }}>
             <Link href={certification.link} className="absolute top-4 right-4 z-10 bg-white inline-flex justify-center items-center px-4 py-2 outline outline-offset-0 outline-1 font-medium rounded-lg text-gray-600 hover:underline">
                 <SquareArrowOutUpRight className="h-5 w-5" />
             </Link>
