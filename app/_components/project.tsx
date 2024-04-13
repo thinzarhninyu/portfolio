@@ -26,11 +26,11 @@ export const Project: React.FC<{ project: Projects & { technologies: { name: str
                 opacity: isInView ? 1 : 0,
                 transition: "ease-in-out 0.75s"
             }}>
-            <Link href={`/projects/${project.id}`} className="absolute top-4 right-4 z-10 bg-white inline-flex justify-center items-center px-4 py-2 outline outline-offset-0 outline-1 font-medium rounded-lg text-gray-600 dark:text-gray-900 hover:underline">
+            <Link href={`/projects/${project.id}`} className="absolute top-4 right-4 z-10 bg-white inline-flex justify-center items-center px-4 py-2 font-medium rounded-lg text-gray-900 dark:text-gray-900 hover:underline shadow-lg hover:bg-gray-100 dark:hover:bg-gray-100">
                 <SquareArrowOutUpRight className="h-5 w-5" />
             </Link>
             <div className="flex justify-center items-center w-full p-3 h-60">
-                <Image src={project.image[0]} alt={project.name} width={300} height={50} className="w-full h-full object-cover rounded-lg" />
+                <Image src={project.image[0]} alt={project.name} width={300} height={200} className="w-full h-full object-cover rounded-lg" />
             </div>
             <CardHeader className="pt-3">
                 <CardTitle className="text-lg text-center overflow-hidden line-clamp-1">
@@ -60,12 +60,12 @@ export const Project: React.FC<{ project: Projects & { technologies: { name: str
             <CardFooter className="justify-center items-center flex flex-row gap-x-4">
                 <div className="flex flex-row gap-x-3">
                     {project.link && (
-                        <Link href={project.link} className="inline-flex justify-center items-center px-4 py-2 outline outline-offset-2 outline-1 font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:underline">
+                        <Link href={project.link} className="inline-flex justify-center items-center px-4 py-2 outline outline-offset-2 outline-1 font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-neutral-700">
                             <Globe className="h-5 w-5" />
                         </Link>
                     )}
                     {project.github && (
-                        <Link href={project.github} className="inline-flex justify-center items-center px-4 py-2 outline outline-offset-2 outline-1 font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:underline">
+                        <Link href={project.github} className="inline-flex justify-center items-center px-4 py-2 outline outline-offset-2 outline-1 font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-neutral-700">
                             <GithubIcon className="h-5 w-5" />
                         </Link>
                     )}
