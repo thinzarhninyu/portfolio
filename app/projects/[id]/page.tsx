@@ -11,14 +11,14 @@ const ProjectDetail: React.FC<{ params: { id: string } }> = async ({ params }) =
 
     if (!project) {
         return (
-            <main className="flex min-h-screen flex-col items-center justify-center px-10 pb-20 sm:px-24 sm:pb-24">
+            <main className="flex min-h-screen flex-col items-center justify-center px-10 pb-20 sm:px-20 sm:pb-24">
                 <h2 className="mt-6 text-xl font-bold tracking-tight text-gray-900">Project Not Found</h2>
             </main>
         )
     }
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between px-10 pb-20 sm:px-24 sm:pb-24">
+        <main className="flex min-h-screen flex-col items-center justify-between px-10 pb-20 sm:px-20 sm:pb-24">
             <div className='pt-12 sm:pt-24'>
                 <section className="">
                     <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">

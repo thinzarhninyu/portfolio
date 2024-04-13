@@ -6,32 +6,32 @@ import { Facebook, Github, Instagram, Linkedin, Mail, Send } from "lucide-react"
 const items: { link: string, Icon: React.ReactNode, className: string }[] = [
     {
         link: "https://www.linkedin.com/in/thinzarhninyu/",
-        Icon: <Linkedin />,
+        Icon: <Linkedin size={18} />,
         className: "text-linkedin"
     },
     {
         link: "https://github.com/thinzarhninyu",
-        Icon: <Github />,
+        Icon: <Github size={18} />,
         className: "text-github"
     },
     {
         link: "https://www.instagram.com/micxehye/",
-        Icon: <Instagram />,
+        Icon: <Instagram size={18} />,
         className: "text-instagram"
     },
     {
         link: "https://www.facebook.com/thinzarhninyu/",
-        Icon: <Facebook />,
+        Icon: <Facebook size={18} />,
         className: "text-facebook"
     },
     {
         link: "https://t.me/micxehye",
-        Icon: <Send />,
+        Icon: <Send size={18} />,
         className: "text-send"
     },
     {
         link: "mailto:thinzarhninyu.17@gmail.com",
-        Icon: <Mail />,
+        Icon: <Mail size={18} />,
         className: "text-mail"
     }
 ];
@@ -48,7 +48,7 @@ export const ContactIcons: React.FC = () => {
                     >
                         <li>
                             <a href={item.link} className={item.className}>
-                                {item.Icon}
+                                <div className="rounded-full outline outline-offset-2 outline-1 outline-gray-300 p-2 hover:bg-gray-100">{item.Icon}</div>
                             </a>
                         </li>
                     </motion.button>

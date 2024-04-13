@@ -6,7 +6,7 @@ const AllProjects: React.FC = async () => {
     const projects = await getProjects();
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between px-10 pb-20 sm:px-24 sm:pb-24">
+        <main className="flex min-h-screen flex-col items-center justify-between px-10 pb-20 sm:px-20 sm:pb-24">
             <div className='pt-12 sm:pt-24'>
                 <section className="">
                     <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">

@@ -6,7 +6,7 @@ import { Separator } from '@/components/ui/separator';
 
 const Home: React.FC = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-10 pb-20 sm:px-24 sm:pb-24">
+    <main className="flex min-h-screen flex-col items-center justify-between px-10 pb-20 sm:px-20 sm:pb-24">
       <div id="about" className='pt-12 sm:pt-24'>
         <Introduction />
       </div>

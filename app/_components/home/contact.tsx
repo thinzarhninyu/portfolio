@@ -58,11 +58,11 @@ export const Contact: React.FC = () => {
                 <div className="text-center mt-16">
                     <h2 className="mt-6 text-xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl lg:text-2xl">Contact Me</h2>
                 </div>
-                <div className="px-6 sm:px-10 py-5 outline outline-offset-2 outline-1 outline-gray-300 rounded-lg mt-5 py-7">
-                    <ContactIcons />
-                    <Card className="mt-7 border-0 outline-0">
+                <div className="outline outline-offset-2 outline-1 outline-gray-300 rounded-lg mt-4">
+                    <Card className="border-0 outline-0 pb-0 pt-7">
+                        <ContactIcons />
                         <CardHeader>
-                            <CardTitle className="text-md font-bold tracking-tight text-gray-900 dark:text-gray-100">Contact me via the links above or fill up the form below.</CardTitle>
+                            <CardTitle className="text-md font-bold tracking-tight text-gray-900 dark:text-gray-100">Contact me via the links above or by filling up the form below.</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <Form {...form}>
