@@ -48,7 +48,7 @@ export const ContactIcons: React.FC = () => {
                     >
                         <li>
                             <a href={item.link} className={item.className}>
-                                <div className="rounded-full outline outline-offset-2 outline-1 outline-gray-300 p-2 hover:bg-gray-100">{item.Icon}</div>
+                                <div className="rounded-full outline outline-offset-2 outline-1 outline-gray-300 p-2 hover:bg-gray-100 dark:hover:bg-gray-900">{item.Icon}</div>
                             </a>
                         </li>
                     </motion.button>
