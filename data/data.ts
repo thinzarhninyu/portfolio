@@ -81,7 +81,7 @@ export const getExtracurriculars = async () => {
 
 export const getCertifications = async () => {
     try {
-        const certifications = await db.certifications.findMany({ orderBy: { startDate: 'desc' } });
+        const certifications = await db.certifications.findMany({ orderBy: { date: 'desc' } });
 
         return certifications;
     } catch {
