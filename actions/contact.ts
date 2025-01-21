@@ -17,7 +17,7 @@ export const contact = async (values: z.infer<typeof ContactSchema>) => {
     const { name, email, message } = validatedFields.data;
 
     await resend.emails.send({
-        from: "mail@thinzarhninyu.me",
+        from: "mail@thinzarhninyu.com",
         to: 'thinzarhninyu.17@gmail.com',
         subject: 'Contact Form Submission',
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
