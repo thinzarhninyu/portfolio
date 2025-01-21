@@ -12,7 +12,7 @@ const font = Urbanist({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'Thinzar Hnin Yu @micxehye: Software Developer',
   description: 'A software developer based in Singapore who is passionate about building software that solves real-world problems. Final year Diploma in Information Technology student, specializing in Software Development, studying @ Singapore Polytechnic.',
-  metadataBase: new URL('https://www.thinzarhninyu.me'),
+  metadataBase: new URL('https://www.thinzarhninyu.com'),
 };
 
 export default function RootLayout({
